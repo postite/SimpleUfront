@@ -1,0 +1,8 @@
+{"menu":
+	[
+	{"nom":"home","data":["a"]},
+	{"nom":"livres","data":["one","two","three"]},
+	{"nom":"galerie","data":["un","deux"]}
+	
+	]
+}

@@ -1,0 +1,33 @@
+-lib ufront-mvc
+-lib erazor
+-lib tink_core
+--macro keep('IntIterator')
+-dce no
+ -debug
+#--connect 6000
+--each
+
+-lib ufront-mvc
+-lib pushstate
+-D client
+
+
+-lib ufront-client
+#--no-traces
+-main Client
+-js www/js/client.js
+
+--next
+
+-D server 
+-main Server
+-neko www/index.n
+-cmd open http://localhost:2000/
+
+
+--next
+
+-D server 
+-main Server
+-php www
+-cmd open -a safari http://localhost:8888/
